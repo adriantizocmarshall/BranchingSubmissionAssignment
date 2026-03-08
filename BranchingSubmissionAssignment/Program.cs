@@ -15,7 +15,7 @@ namespace BranchingSubmissionAssignment
             Console.WriteLine("Please enter the weight of your package in pounds.");
             string weight = Console.ReadLine(); // Stores weight as a string for later integer conversion
             Console.ReadLine();
-            if (Convert.ToInt32(weight) <= 50) // Checks if entered weight is less than or equal to 50 pounds
+            if (Convert.ToInt32(weight) < 50) // Checks if entered weight is less than or equal to 50 pounds
                 // If true, asks for package dimensions
             {
                 Console.WriteLine("Please enter the package width in inches.");
@@ -28,7 +28,7 @@ namespace BranchingSubmissionAssignment
                 string length = Console.ReadLine();
                 Console.ReadLine();
                 int dimensions = Convert.ToInt32(length) + Convert.ToInt32(width) + Convert.ToInt32(height);
-                if (dimensions >= 50) // Checks if dimensions are greater than or equal to 50
+                if (dimensions > 50) // Checks if dimensions are greater than or equal to 50
                 {
                     // If true, declines user and terminates program
                     Console.WriteLine("Package too big to be shipped via Planet Express. Have a nice day!");
